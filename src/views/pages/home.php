@@ -1,6 +1,6 @@
-<?= $render('header'); ?>
+<?= $render('header', ['loggedUser' => $loggedUser]); ?>
 <section class="container main">
-    <?= $render('sidebar'); ?>
+    <?= $render('sidebar');?>
 
     <section class="feed mt-10">
         <div class="row">
