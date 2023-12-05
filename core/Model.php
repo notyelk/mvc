@@ -56,5 +56,4 @@ class Model {
         self::_checkH();
         return self::$_h->delete();
     }
-
 }

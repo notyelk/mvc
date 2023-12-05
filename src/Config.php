@@ -4,11 +4,12 @@ namespace src;
 class Config {
     const BASE_DIR = '/devsbook/public';
 
-    const DB_DRIVER = 'pgsql'; 
+    const DB_DRIVER = 'mysql';
     const DB_HOST = 'localhost';
-    const DB_DATABASE = 'dbkley';
-    const DB_USER = 'postgres';
-    const DB_PASS = 'kleytonn1';
+    const DB_DATABASE = 'devsbook';
+    const DB_USER = 'root';
+    const DB_PASS = '';
+    
     
 
     const ERROR_CONTROLLER = 'ErrorController';
