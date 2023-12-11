@@ -3,6 +3,9 @@
 namespace src\handlers;
 
 use src\models\Post;
+use src\models\User;
+use src\models\UserRelation;
+
 
 class PostHandler{
     public static function addPost($idUser, $type, $body){
@@ -20,4 +23,19 @@ class PostHandler{
 
         }
     }
+
+    public static function getHomeFeed($idUser){
+        $userList = UserRelation::select()->where('user_from', $idUser)->get();
+        $users = [];
+
+        foreach($userList as $userItem){
+            $users[] = $userItem['user_to'];
+        }
+
+        $users[] = $idUser;
+
+        print_r($users);
+
+    }
+
 }
