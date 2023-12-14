@@ -34,6 +34,7 @@ class Model {
     public static function getTableName() {
         $className = explode('\\', get_called_class());
         $className = end($className);
+
         return strtolower($className).'s';
     }
 
